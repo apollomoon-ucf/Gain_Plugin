@@ -42,5 +42,5 @@ void Gain_slider_brianMoonAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
-//    gain_slider.setBounds(getWidth() / 2 - 50, getHeight() / 2 - 100, 100, 200);
+    gain_slider.setBounds(getWidth() / 2 - 50, getHeight() / 2 - 100, 100, 200);
 }
