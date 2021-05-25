@@ -156,7 +156,7 @@ void Gain_slider_brianMoonAudioProcessor::processBlock (juce::AudioBuffer<float>
 
         // ..do something to the data...
         for (int sample = 0; sample < buffer.getNumSamples(); ++sample) {
-            channelData[sample] = channelData[sample] * gain_amount;
+            channelData[sample] = channelData[sample] * juce::Decibels::decibelsToGain (gain_amount);
         }
     }
 }
