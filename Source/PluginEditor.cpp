@@ -41,7 +41,7 @@ void Gain_slider_brianMoonAudioProcessorEditor::paint (juce::Graphics& g)
     g.setFont (18.0f);
 //    g.drawFittedText ("Gain", getLocalBounds(), juce::Justification::centredTop, 1);
 //    g.drawText("Gain", getLocalBounds(), juce::Justification::centredTop);
-    g.drawFittedText("Gain Slider", getWidth() / 2 - 50, 20, 100, 100, juce::Justification::centredTop, 1);
+    g.drawFittedText("Gain", getWidth() / 2 - 50, 20, 100, 100, juce::Justification::centredTop, 1);
 }
 
 void Gain_slider_brianMoonAudioProcessorEditor::resized()
