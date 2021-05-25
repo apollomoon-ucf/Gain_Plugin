@@ -1,5 +1,5 @@
 
-# Gain_Slider_Juce
+# Gain Slider (JUCE)
 Building a simple gain slider audio plugin while learning the JUCE framework
 
 Build v1
