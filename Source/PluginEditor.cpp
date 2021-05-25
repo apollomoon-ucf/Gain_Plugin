@@ -15,6 +15,7 @@ Gain_slider_brianMoonAudioProcessorEditor::Gain_slider_brianMoonAudioProcessorEd
 {
     gain_slider.setSliderStyle (juce::Slider::SliderStyle::LinearVertical);
     gain_slider.setTextBoxStyle (juce::Slider::TextBoxBelow, true, 50, 20);
+    gain_slider.setTextBoxIsEditable(true);
     gain_slider.setRange (-75.0f, 12.0f, 0.01f);
     gain_slider.setValue (0.0f);
     gain_slider.addListener(this); // this refers to this class
