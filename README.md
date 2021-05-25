@@ -1,10 +1,13 @@
 
-# Gain_Slider_Juce
-Building a simple gain slider audio plugin while learning the JUCE framework
+
+# Gain Plugin (JUCE)
+Building a simple gain audio plugin while learning the JUCE framework
 
 Build v1
 
-![gain_slider_screenshot](https://user-images.githubusercontent.com/25870426/119508827-13a2f200-bd3e-11eb-9a7e-a92de2788172.png)
+![gain_plugin_screenshot](https://user-images.githubusercontent.com/25870426/119519056-1a823280-bd47-11eb-8284-af11915519f6.png)
 
- (screenshot of au in GarageBand)
+(screenshot of au in GarageBand)
+ 
+Brian Moon 2021
 
