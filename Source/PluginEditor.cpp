@@ -36,8 +36,10 @@ void Gain_slider_brianMoonAudioProcessorEditor::paint (juce::Graphics& g)
 //    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
 //    g.setColour (juce::Colours::black);
-//    g.setFont (15.0f);
-//    g.drawFittedText ("Hello, World! Brian's first audio plugin!", getLocalBounds(), juce::Justification::centred, 1);
+    g.setFont (18.0f);
+//    g.drawFittedText ("Gain", getLocalBounds(), juce::Justification::centredTop, 1);
+//    g.drawText("Gain", getLocalBounds(), juce::Justification::centredTop);
+    g.drawFittedText("Gain Slider", getWidth() / 2 - 50, 20, 100, 100, juce::Justification::centredTop, 1);
 }
 
 void Gain_slider_brianMoonAudioProcessorEditor::resized()
