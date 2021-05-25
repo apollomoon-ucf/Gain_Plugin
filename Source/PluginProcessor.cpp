@@ -155,6 +155,9 @@ void Gain_slider_brianMoonAudioProcessor::processBlock (juce::AudioBuffer<float>
         auto* channelData = buffer.getWritePointer (channel);
 
         // ..do something to the data...
+        for (int sample = 0; sample < buffer.getNumSamples(); ++sample) {
+            channelData[sample] = channelData[sample] * gain_amount;
+        }
     }
 }
 

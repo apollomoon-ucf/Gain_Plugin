@@ -17,6 +17,7 @@ Gain_slider_brianMoonAudioProcessorEditor::Gain_slider_brianMoonAudioProcessorEd
     gain_slider.setTextBoxStyle (juce::Slider::TextBoxBelow, true, 50, 20);
     gain_slider.setRange (0.0f, 1.0f, 0.01f);
     gain_slider.setValue (0.5f);
+    gain_slider.addListener(this); // this refers to this class
     addAndMakeVisible (gain_slider);
     
     
@@ -44,4 +45,12 @@ void Gain_slider_brianMoonAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
     gain_slider.setBounds(getWidth() / 2 - 50, getHeight() / 2 - 100, 100, 200);
+}
+
+// gain is modified the position of our slider
+void Gain_slider_brianMoonAudioProcessorEditor::sliderValueChanged (juce::Slider *slider)
+{
+    if (slider == &gain_slider) {
+        audioProcessor.gain_amount = gain_slider.getValue();
+    }
 }

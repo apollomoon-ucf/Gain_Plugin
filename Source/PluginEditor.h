@@ -14,7 +14,7 @@
 //==============================================================================
 /**
 */
-class Gain_slider_brianMoonAudioProcessorEditor  : public juce::AudioProcessorEditor
+class Gain_slider_brianMoonAudioProcessorEditor  : public juce::AudioProcessorEditor,                                                public juce::Slider::Listener
 {
 public:
     Gain_slider_brianMoonAudioProcessorEditor (Gain_slider_brianMoonAudioProcessor&);
@@ -23,6 +23,7 @@ public:
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
+    void sliderValueChanged (juce::Slider* slider) override;
 
 private:
     juce::Slider gain_slider;
