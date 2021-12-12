@@ -9,7 +9,8 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
-class Gain_slider_brianMoonAudioProcessorEditor  : public juce::AudioProcessorEditor,public juce::Slider::Listener
+class Gain_slider_brianMoonAudioProcessorEditor  : public juce::AudioProcessorEditor,
+                                                   public juce::Slider::Listener
 {
 public:
     Gain_slider_brianMoonAudioProcessorEditor (Gain_slider_brianMoonAudioProcessor&);
