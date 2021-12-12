@@ -1,9 +1,7 @@
 /*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
+  Author:      Brian Moon
+  Project:     Gain Plugin
+  File Name:   PluginEditor.h
 */
 
 #pragma once
@@ -11,16 +9,12 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
-//==============================================================================
-/**
-*/
 class Gain_slider_brianMoonAudioProcessorEditor  : public juce::AudioProcessorEditor,                                                public juce::Slider::Listener
 {
 public:
     Gain_slider_brianMoonAudioProcessorEditor (Gain_slider_brianMoonAudioProcessor&);
     ~Gain_slider_brianMoonAudioProcessorEditor() override;
 
-    //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
     void sliderValueChanged (juce::Slider* slider) override;

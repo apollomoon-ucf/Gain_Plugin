@@ -1,15 +1,12 @@
 /*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin processor.
-
-  ==============================================================================
+  Author:      Brian Moon
+  Project:     Gain Plugin
+  File Name:   PluginProcessor.cpp
 */
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-//==============================================================================
 Gain_slider_brianMoonAudioProcessor::Gain_slider_brianMoonAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
@@ -28,7 +25,6 @@ Gain_slider_brianMoonAudioProcessor::~Gain_slider_brianMoonAudioProcessor()
 {
 }
 
-//==============================================================================
 const juce::String Gain_slider_brianMoonAudioProcessor::getName() const
 {
     return JucePlugin_Name;
@@ -90,7 +86,6 @@ void Gain_slider_brianMoonAudioProcessor::changeProgramName (int index, const ju
 {
 }
 
-//==============================================================================
 void Gain_slider_brianMoonAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     // Use this method as the place to do any pre-playback
@@ -161,7 +156,6 @@ void Gain_slider_brianMoonAudioProcessor::processBlock (juce::AudioBuffer<float>
     }
 }
 
-//==============================================================================
 bool Gain_slider_brianMoonAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
@@ -172,7 +166,6 @@ juce::AudioProcessorEditor* Gain_slider_brianMoonAudioProcessor::createEditor()
     return new Gain_slider_brianMoonAudioProcessorEditor (*this);
 }
 
-//==============================================================================
 void Gain_slider_brianMoonAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
     // You should use this method to store your parameters in the memory block.
@@ -186,7 +179,6 @@ void Gain_slider_brianMoonAudioProcessor::setStateInformation (const void* data,
     // whose contents will have been created by the getStateInformation() call.
 }
 
-//==============================================================================
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {

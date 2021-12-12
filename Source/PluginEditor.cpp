@@ -1,15 +1,12 @@
 /*
-  ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin editor.
-
-  ==============================================================================
+  Author:      Brian Moon
+  Project:     Gain Plugin
+  File Name:   PluginEditor.cpp
 */
 
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
-//==============================================================================
 Gain_slider_brianMoonAudioProcessorEditor::Gain_slider_brianMoonAudioProcessorEditor (Gain_slider_brianMoonAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
@@ -30,17 +27,11 @@ Gain_slider_brianMoonAudioProcessorEditor::~Gain_slider_brianMoonAudioProcessorE
 {
 }
 
-//==============================================================================
 void Gain_slider_brianMoonAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll(juce::Colours::rebeccapurple);
-//    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
-
-//    g.setColour (juce::Colours::black);
     g.setFont (18.0f);
-//    g.drawFittedText ("Gain", getLocalBounds(), juce::Justification::centredTop, 1);
-//    g.drawText("Gain", getLocalBounds(), juce::Justification::centredTop);
     g.drawFittedText("Gain", getWidth() / 2 - 50, 20, 100, 100, juce::Justification::centredTop, 1);
 }
 
